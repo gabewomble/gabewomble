@@ -1,4 +1,5 @@
 <script>
+	import theme from '../store/theme';
 	import Nav from '../components/Nav.svelte';
 
 	export let segment;
@@ -6,17 +7,19 @@
 
 <style>
 	main {
-		position: relative;
-		max-width: 56em;
-		background-color: white;
-		padding: 2em;
-		margin: 0 auto;
+		background-color: var(--app-bg);
 		box-sizing: border-box;
+		color: var(--app-text);
+		height: 100vh;
+		margin: 0 auto;
+		overflow: hidden;
+		position: relative;
+		width: 100vw;
 	}
 </style>
 
-<Nav {segment}/>
 
-<main>
+<main class={$theme}>
+	<Nav {segment}/>
 	<slot></slot>
 </main>

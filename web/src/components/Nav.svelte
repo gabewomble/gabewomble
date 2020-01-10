@@ -1,12 +1,17 @@
 <script>
+	import ThemeToggle from './ThemeToggle.svelte';
 	export let segment;
 </script>
 
 <style>
 	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
+		align-items: center;
+		border-bottom: 1px solid var(--app-border);
+		display: flex;
 		font-weight: 300;
+		justify-content: space-between;
 		padding: 0 1em;
+		width: 100%;
 	}
 
 	ul {
@@ -14,7 +19,6 @@
 		padding: 0;
 	}
 
-	/* clearfix */
 	ul::after {
 		content: '';
 		display: block;
@@ -36,7 +40,7 @@
 		content: '';
 		width: calc(100% - 1em);
 		height: 2px;
-		background-color: rgb(255,62,0);
+		background-color: var(--app-emphasis);
 		display: block;
 		bottom: -1px;
 	}
@@ -57,4 +61,5 @@
 		     the blog data when we hover over the link or tap it on a touchscreen -->
 		<li><a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>blog</a></li>
 	</ul>
+	<ThemeToggle />
 </nav>

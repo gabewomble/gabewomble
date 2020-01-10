@@ -1,9 +1,55 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	--white: #fff;
+	--darkest: #333;
+	--darker: #444;
+	--dark: #555;
+	/* Flat UI Palette */
+	--clouds: #ecf0f1;
+	--silver: #bdc3c7;
+	--concrete: #95a5a6;
+	--asbestos: #7f8c8d;
+	--sun-flower: #f1c40f;
+	--turquoise: #1abc9c;
+	--green-sea: #16a085;
+	--emerald: #2ecc71;
+	--nephritis: #27ae60;
+	--orange: #f39c12;
+	--carrot: #e67e22;
+	--pumpkin: #d35400;
+	--alizarin: #e74c3c;
+	--pomegranate: #c0392b;
+	--amethyst: #9b59b6;
+	--wisteria: #8e44ad;
+	--peter-river: #3498db;
+	--belize-hole: #2980b9;
+	--wet-asphalt: #34495e;
+	--midnight-blue: #2c3e50;
+}
+
 body {
 	margin: 0;
 	font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 	font-size: 14px;
 	line-height: 1.5;
 	color: #333;
+}
+
+main.light {
+	--app-bg: var(--white);
+	--app-text: var(--darkest);
+	--app-emphasis: var(--belize-hole);
+	--app-border: var(--silver);
+}
+
+main.dark {
+	--app-bg: var(--midnight-blue);
+	--app-text: var(--clouds);
+	--app-emphasis: var(--pumpkin);
+	--app-border: var(--silver);
 }
 
 h1, h2, h3, h4, h5, h6 {
