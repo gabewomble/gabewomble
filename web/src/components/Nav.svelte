@@ -1,12 +1,17 @@
 <script>
 	import ThemeToggle from './ThemeToggle.svelte';
 	export let segment;
+
+	const navItems = [
+		'blog',
+		'github',
+	];
 </script>
 
 <style>
 	nav {
 		align-items: center;
-		border-bottom: 1px solid var(--app-border);
+		border-bottom: 2px solid var(--app-border);
 		display: flex;
 		font-weight: 300;
 		justify-content: space-between;
@@ -42,10 +47,11 @@
 		height: 2px;
 		background-color: var(--app-emphasis);
 		display: block;
-		bottom: -1px;
+		bottom: -2px;
 	}
 
 	a {
+		text-transform: capitalize;
 		text-decoration: none;
 		padding: 1em 0.5em;
 		display: block;
@@ -54,12 +60,12 @@
 
 <nav>
 	<ul>
-		<li><a class='{segment === undefined ? "selected" : ""}' href='.'>home</a></li>
-		<li><a class='{segment === "about" ? "selected" : ""}' href='about'>about</a></li>
-
-		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>blog</a></li>
+		<li><a class='{segment === undefined ? "selected" : ""}' href='.'>about</a></li>
+		{#each navItems as navItem}
+			<li>
+				<a rel=prefetch class={segment === navItem ? "selected" : ""} href={navItem}>{navItem}</a>
+			</li>
+		{/each}
 	</ul>
 	<ThemeToggle />
 </nav>

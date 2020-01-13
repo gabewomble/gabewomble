@@ -4,7 +4,6 @@
   import Icon from './Icon.svelte';
 
   $: isLightTheme = $theme === THEMES.LIGHT;
-  $: message = `turn ${isLightTheme ? 'off' : 'on'} the lights`;
 
   function toggleTheme() {
     theme.update((t) => {
@@ -19,9 +18,16 @@
   .theme-toggle {
     align-items: center;
     background: transparent;
-    border: none;
+    border: 1px solid var(--peter-river);
+    border-radius: 0.5em;
     color: var(--app-text);
     display: flex;
+    justify-content: center;
+    padding: 0.5em;
+  }
+
+  .theme-toggle.dark {
+    border: 1px solid var(--orange);
   }
 
   .theme-toggle :global(svg) {
@@ -47,5 +53,4 @@
   {:else}
     <Icon dataSymbol="light-icon" dataClass="fas fa-sun" />
   {/if}
-  <p>{message}</p>
 </button>

@@ -12,7 +12,8 @@
 		color: var(--app-text);
 		height: 100vh;
 		margin: 0 auto;
-		overflow: hidden;
+		overflow-x: hidden;
+		overflow-y: scroll;
 		position: relative;
 		width: 100vw;
 	}
@@ -21,5 +22,5 @@
 
 <main class={$theme}>
 	<Nav {segment}/>
-	<slot></slot>
+		<slot />
 </main>
