@@ -1,30 +1,21 @@
 # gabewomble.com
 
-_Fully customizable blog template with a Svelte.js front-end._
+This is my current (wip) personal site. It was scaffolded using a Sanity.io / Sapper template. I was initially going to set up a sapper integration with a CMS myself, however I've heard good things about Sanity, and it already offers a Sapper template.
 
-Deployed from [sanity.io/create](https://www.sanity.io/create?template=sanity-io/sanity-template-sapper-blog)
+## Core Tech
 
-## What you have
+- [Sapper](https://sapper.svelte.dev/)
+- [Sanity.io CMS](https://www.sanity.io)
+- [Netlify](https://netlify.com)
 
-- A Military-grade progressive blog with [Sapper](https://sapper.svelte.dev/)
-- Structured content using [Sanity.io](https://www.sanity.io)
-- Global deployment on [Netlify](https://netlify.com)
+## Running the project
 
-## Quick start
-
-1. Clone this repository
-2. `npm install` in the project root folder on local
-3. `npm run dev` to start the studio and frontend locally
-   - Your studio should be running on [http://localhost:3333](http://localhost:3333)
-   - Your frontend should be running on [http://localhost:3000](http://localhost:3000)
-4. `npm run build` to build to production locally
+1. `npm install` in the project root folder on local
+2. `npm run dev` to start the studio and frontend locally
+   - CMS will run on [http://localhost:3333](http://localhost:3333)
+   - Client will run on [http://localhost:3000](http://localhost:3000)
+3. `npm run build` to build to production locally
 
 ## Deploy changes
 
-Netlify automatically deploys new changes commited to master on GitHub. If you want to change deployment branch, do so in [build & deploy settings on Netlify](https://www.netlify.com/docs/continuous-deployment/#branches-deploys).
-
-## Stuck? Get help
-
-[![Slack Community Button](https://slack.sanity.io/badge.svg)](https://slack.sanity.io/)
-
-Join [Sanity’s developer community](https://slack.sanity.io) or ping us [on twitter](https://twitter.com/sanity_io).
+Changes are automatically deployed when pushed to master.

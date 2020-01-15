@@ -1,6 +1,7 @@
 <script>
 	import theme from '../store/theme';
 	import Nav from '../components/Nav.svelte';
+	import Footer from '../components/Footer.svelte';
 
 	export let segment;
 </script>
@@ -10,6 +11,9 @@
 		background-color: var(--app-bg);
 		box-sizing: border-box;
 		color: var(--app-text);
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto 1fr auto;
 		height: 100vh;
 		margin: 0 auto;
 		overflow-x: hidden;
@@ -23,5 +27,6 @@
 
 <main class={$theme}>
 	<Nav {segment}/>
-		<slot />
+	<slot />
+	<Footer />
 </main>
