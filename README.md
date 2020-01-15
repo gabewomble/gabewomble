@@ -16,6 +16,10 @@ This is my current (wip) personal site. It was scaffolded using a Sanity.io / Sa
    - Client will run on [http://localhost:3000](http://localhost:3000)
 3. `npm run build` to build to production locally
 
+## Note
+
+Install new node modules in the root folder.
+
 ## Deploy changes
 
 Changes are automatically deployed when pushed to master.
