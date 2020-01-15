@@ -4,18 +4,36 @@
 		const repos = await res.json();
 
 		return { repos };
-	}
+  }
 </script>
 
 <script>
+  import Button from '../../components/Button.svelte';
+  import Repo from '../../components/Repo.svelte';
+
   export let repos;
+
+  let showForks = false;
+
+  $: btnText = `${showForks ? 'Hide' : 'Show'} forks`;
+  
+  function toggleShowForks() {
+    showForks = !showForks;
+  }
 </script>
 
 <style>
-  section {
+  .page-header {
+    align-items: center;
     display: flex;
-    flex-direction: column;
-  }  
+    justify-content: space-between;
+    margin-bottom: 1em;
+  }
+
+  h2 {
+    line-height: 1;
+  }
+
 </style>
 
 <svelte:head>
@@ -23,7 +41,13 @@
 </svelte:head>
 
 <section>
+  <div class="page-header">
+    <h2>Public Projects</h2>
+    <Button on:click={toggleShowForks}>{btnText}</Button>
+  </div>
   {#each repos as repo}
-    <div>{repo.name}</div>
+    {#if !repo.fork || (repo.fork && showForks)}
+      <Repo {repo} />
+    {/if}
   {/each}
 </section>

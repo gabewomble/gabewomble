@@ -39,12 +39,6 @@
   .theme-toggle.dark :global(svg) {
     color: var(--orange);
   }
-
-  p {
-    margin: 0.75em;
-    font-size: 16px;
-    font-weight: 300;
-  }
 </style>
 
 <button class={`theme-toggle ${$theme}`} on:click={toggleTheme}>

@@ -10,13 +10,19 @@
 
 <style>
 	nav {
-		align-items: center;
 		border-bottom: 2px solid var(--app-border);
+		width: 100%;
+	}
+
+	div {
+		align-items: center;
 		display: flex;
 		font-weight: 300;
 		justify-content: space-between;
 		padding: 0 1em;
+		margin: 0 auto;
 		width: 100%;
+		max-width: var(--max-width);
 	}
 
 	ul {
@@ -56,16 +62,22 @@
 		padding: 1em 0.5em;
 		display: block;
 	}
+
+	li:first-child > a {
+		padding-left: 0;
+	}
 </style>
 
 <nav>
-	<ul>
-		<li><a class='{segment === undefined ? "selected" : ""}' href='.'>about</a></li>
-		{#each navItems as navItem}
-			<li>
-				<a rel=prefetch class={segment === navItem ? "selected" : ""} href={navItem}>{navItem}</a>
-			</li>
-		{/each}
-	</ul>
-	<ThemeToggle />
+	<div>
+		<ul>
+			<li><a class='{segment === undefined ? "selected" : ""}' href='.'>about</a></li>
+			{#each navItems as navItem}
+				<li>
+					<a rel=prefetch class={segment === navItem ? "selected" : ""} href={navItem}>{navItem}</a>
+				</li>
+			{/each}
+		</ul>
+		<ThemeToggle />
+	</div>
 </nav>

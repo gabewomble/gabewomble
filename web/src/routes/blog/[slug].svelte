@@ -60,8 +60,10 @@
   <title>{`Gabriel Womble | ${post.title}`}</title>
 </svelte:head>
 
-<h1>{post.title}</h1>
+<section>
+  <h1>{post.title}</h1>
 
-<div class="content">
-  <BlockContent blocks={post.body} {serializers} />
-</div>
+  <div class="content">
+    <BlockContent blocks={post.body} {serializers} />
+  </div>
+</section>
