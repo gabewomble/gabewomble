@@ -3,7 +3,7 @@
 	export let segment;
 
 	const navItems = [
-		'blog',
+		// 'blog',
 		'github',
 	];
 </script>

@@ -5,6 +5,7 @@ import svelte from 'rollup-plugin-svelte';
 import babel from 'rollup-plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import json from '@rollup/plugin-json';
+import svg from 'rollup-plugin-svg';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
 
@@ -24,6 +25,7 @@ export default {
     input: config.client.input(),
     output: config.client.output(),
     plugins: [
+      svg(),
       replace({
         'process.browser': true,
         'process.env.NODE_ENV': JSON.stringify(mode),
@@ -42,7 +44,7 @@ export default {
 
       legacy &&
         babel({
-          extensions: ['.js', '.mjs', '.html', '.svelte'],
+          extensions: ['.js', '.mjs', '.html', '.svelte', '.svg'],
           runtimeHelpers: true,
           exclude: ['node_modules/@babel/**'],
           presets: [
@@ -77,6 +79,7 @@ export default {
     input: config.server.input(),
     output: config.server.output(),
     plugins: [
+      svg(),
       replace({
         'process.browser': false,
         'process.env.NODE_ENV': JSON.stringify(mode),

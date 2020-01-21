@@ -19,7 +19,6 @@
 		overflow-x: hidden;
 		overflow-y: scroll;
 		position: relative;
-		transition: background-color var(--ts-speed) ease-in;
 		width: 100vw;
 	}
 </style>
