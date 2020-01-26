@@ -59,7 +59,7 @@
 	</AboutSkill>
 	<AboutDivider />
 	<AboutParagraph
-		text="While I experiement with many technologies for fun, I am very experienced with the modern front end ecosystem, whether that be bundlers, building responsive layouts, or complex state management."
+		text="While I experiment with many technologies for fun, I am very experienced with the modern front end ecosystem, whether that be bundlers, building responsive layouts, or complex state management."
 	/>
 </section>
 
