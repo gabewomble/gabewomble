@@ -13,7 +13,7 @@
 
   export let repos;
 
-  let showForks = false;
+  let showForks = true;
 
   $: btnText = `${showForks ? 'Hide' : 'Show'} forks`;
   
