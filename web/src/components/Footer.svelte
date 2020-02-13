@@ -35,11 +35,10 @@
     margin: 0 auto;
   }
 
-  .socials-container :global(svg) {
+  .socials-container :global(span) {
     color: var(--app-text);
-    height: 2em;
+    font-size: 1.5em;
     margin: 0 0.5em;
-    width: 2em;
   }
 </style>
 
