@@ -1,18 +1,5 @@
 <script>
-  export let dataSymbol;
-  export let dataClass;
-
-  $: xlink = `#${dataSymbol}`;
+  export let name;
 </script>
 
-<style>
-  svg {
-    display: block;
-    overflow: visible;
-  }
-</style>
-
-<div>
-  <i data-fa-symbol={dataSymbol} class={dataClass} />
-  <svg><use xlink:href={xlink} /></svg>
-</div>
+<span class={name} />

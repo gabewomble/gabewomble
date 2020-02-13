@@ -4,22 +4,19 @@
   const socials = [
     {
       icon: {
-        dataSymbol: 'instagram',
-        dataClass: 'fab fa-instagram',
+        name: 'fab fa-instagram',
       },
       href: 'https://instagram.com/gabrielwomble',
     },
     {
       icon: {
-        dataSymbol: 'github',
-        dataClass: 'fab fa-github-square',
+        name: 'fab fa-github-square',
       },
       href: 'https://github.com/gabewomble',
     },
     {
       icon: {
-        dataSymbol: 'linkedin',
-        dataClass: 'fab fa-linkedin',
+        name: 'fab fa-linkedin',
       },
       href: 'https://linkedin.com/in/gabewomble',
     },

@@ -30,21 +30,20 @@
     border: 1px solid var(--orange);
   }
 
-  .theme-toggle :global(svg) {
+  .theme-toggle :global(span) {
     color: var(--peter-river);
-    height: 1.5em;
-    width: 1.5em;
+    font-size: 1.2em;
   }
 
-  .theme-toggle.dark :global(svg) {
+  .theme-toggle.dark :global(span) {
     color: var(--orange);
   }
 </style>
 
 <button class={`theme-toggle ${$theme}`} on:click={toggleTheme}>
   {#if isLightTheme}
-    <Icon dataSymbol="dark-icon" dataClass="fas fa-moon" />
+    <Icon name="fas fa-moon" />
   {:else}
-    <Icon dataSymbol="light-icon" dataClass="fas fa-sun" />
+    <Icon name="fas fa-sun" />
   {/if}
 </button>
